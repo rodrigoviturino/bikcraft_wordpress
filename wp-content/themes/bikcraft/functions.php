@@ -18,10 +18,16 @@ add_theme_support('menus');
 // Registrar Menu
 function register_my_menu() {
     register_nav_menu('menu-principal', __('Menu Principal') );
-}
+} 
 add_action('init', 'register_my_menu');
 
-function my_custom_sizes(){
+// Registrar Menu
+// function my_custom_sizes() {
+//     register_nav_menu('menu-principal', __('Menu Principal') );
+//     add_image_size('large', 1400, 380);
+// } 
+
+function my_custom(){
     add_image_size('large', 1400, 380, true);
     add_image_size('medium', 768, 380, true);
 }
@@ -29,7 +35,5 @@ function my_custom_sizes(){
 // Essa ação só vai acontecer quando o INICIAR O TEMA
     // Quando vai acontecer?  // Ativar qual função?
 add_action('after_setup_theme', 'my_custom_sizes');
-
-
 
 ?>
